@@ -41,4 +41,7 @@ A modern web app built with **Next.js**, **TypeScript**, **React Query**, and **
 ```bash
 git clone https://github.com/TanmayShil/Book-Explorer-Next-Firebase-GoogleBooksAPI-ReactQuery.git
 cd book-explorer
+```
+---
+
 
