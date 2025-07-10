@@ -30,7 +30,7 @@ A modern web app built with **Next.js**, **TypeScript**, **React Query**, and **
 
 | Search | Book Details | Favorites |
 |--------|---------------|-----------|
-| ![](public/screens/search.png) | ![](public/screens/book-details.png) | ![](public/screens/favorites.png) |
+| ![](public/search.png) | ![](public/screens/book-details.png) | ![](public/screens/favorites.png) |
 
 ---
 
