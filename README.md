@@ -26,6 +26,42 @@ A modern web app built with **Next.js**, **TypeScript**, **React Query**, and **
 
 ---
 
+## 📁 Project Structure
+
+<pre><code>
+  
+book-explorer/
+├── components/                 # Reusable UI components
+├── hooks/                      # Custom hooks (e.g., useBooks)
+|   ├── utils/                  # Auth helpers
+|   |   ├── useAuthCookies.ts   # store cookies using nookies
+|   |   └── useAuth.ts          # handle login, signup, logout
+|   └── react-query/useBook.ts  # fetch books list & book api call
+├── lib/                     
+|   └── firebase.ts             # Firebase setup
+├── pages/                      # Next.js routes
+│   ├── index.tsx               # Home/Search
+│   ├── login.tsx               # Login page
+│   ├── signup.tsx              # Signup page
+│   ├── favorites.tsx           # Favorite books page
+│   └── books/[id].tsx          # Book details
+├── typesript/                  # TypeScript interfaces
+|   └── type/book.ts 
+├── mui-theme/                  # Custom MUI theme setup
+│ ├── _muiPalette.ts            # Theme color logic
+│ ├── _muiTheme.ts              # Complete theme config
+│ └── MuiThemeProvider.tsx      # Theme provider component
+├── public/                     # Public assets (images, icons)
+├── styles/                     # Global styles (optional)
+├── .env.local                  # Environment variables
+├── tsconfig.json               # TypeScript config
+├── next.config.js              # Next.js config
+└── README.md                   # Project documentation
+
+</code></pre>
+
+---
+
 ## 🖼️ Screenshots
 
 | Search | Book Details | Favorites |
