@@ -10,8 +10,11 @@ import {
   DialogContentText,
   DialogActions,
   Button,
+  Box,
 } from "@mui/material";
 import LogoutIcon from "@mui/icons-material/Logout";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import HomeIcon from "@mui/icons-material/Home";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useAuth } from "@/hooks/utils/useAuth";
@@ -48,12 +51,18 @@ const Navbar = () => {
 
   return (
     <>
-      <AppBar position="static" color="primary" elevation={3}>
+      <AppBar
+        position="static"
+        sx={{
+          background: "linear-gradient(to right, #3f51b5, #1a237e)",
+          boxShadow: 4,
+        }}
+      >
         <Container maxWidth="lg">
           <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
             <Link href="/" passHref>
               <Typography
-                variant="h6"
+                variant="h5"
                 sx={{
                   color: "#fff",
                   textDecoration: "none",
@@ -62,30 +71,43 @@ const Navbar = () => {
                   "&:hover": { textDecoration: "underline" },
                 }}
               >
-                Book Explorer
+                📚 Book Explorer
               </Typography>
             </Link>
 
-            <IconButton
-              color="inherit"
-              onClick={handleLogoutClick}
-              sx={{
-                border: "1px solid white",
-                borderRadius: "8px",
-                padding: "6px 12px",
-                "&:hover": {
-                  backgroundColor: "rgba(255,255,255,0.1)",
-                },
-              }}
-            >
-              <LogoutIcon sx={{ mr: 1 }} />
-              <Typography variant="body2" sx={{ color: "#fff" }}>
-                Logout
-              </Typography>
-            </IconButton>
+            <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
+              <Link href="/" passHref>
+                <IconButton sx={{ color: "white" }}>
+                  <HomeIcon />
+                </IconButton>
+              </Link>
+              <Link href="/favorites" passHref>
+                <IconButton sx={{ color: "white" }}>
+                  <FavoriteIcon />
+                </IconButton>
+              </Link>
+              <IconButton
+                color="inherit"
+                onClick={handleLogoutClick}
+                sx={{
+                  border: "1px solid white",
+                  borderRadius: "8px",
+                  padding: "6px 12px",
+                  "&:hover": {
+                    backgroundColor: "rgba(255,255,255,0.1)",
+                  },
+                }}
+              >
+                <LogoutIcon sx={{ mr: 1 }} />
+                <Typography variant="body2" sx={{ color: "#fff" }}>
+                  Logout
+                </Typography>
+              </IconButton>
+            </Box>
           </Toolbar>
         </Container>
       </AppBar>
+
       <Dialog maxWidth="md" open={dialogOpen} onClose={handleCancelLogout}>
         <DialogTitle>Confirm Logout</DialogTitle>
         <DialogContent>
