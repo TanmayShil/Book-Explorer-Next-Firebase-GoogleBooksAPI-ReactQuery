@@ -104,3 +104,15 @@ NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
 ```
 ---
 
+## 💻 Run the App Locally
+
+```bash
+npm install
+npm run dev
+```
+---
+
+## 🙋‍♂️ Author
+
+Made with ❤️ by Tanmay Shil
+GitHub: [@TanmayShil](https://github.com/TanmayShil)
