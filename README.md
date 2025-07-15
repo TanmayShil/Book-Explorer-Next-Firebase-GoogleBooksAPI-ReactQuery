@@ -32,6 +32,9 @@ A modern web app built with **Next.js**, **TypeScript**, **React Query**, and **
   
 book-explorer/
 ├── components/                 # Reusable UI components
+|    ├── Navbar.tsx             
+|    ├── BookCard.tsx           
+|    └── SearchBar.tsx
 ├── hooks/                      # Custom hooks (e.g., useBooks)
 |   ├── utils/                  # Auth helpers
 |   |   ├── useAuthCookies.ts   # store cookies using nookies
@@ -51,6 +54,7 @@ book-explorer/
 │ ├── _muiPalette.ts            # Theme color logic
 │ ├── _muiTheme.ts              # Complete theme config
 │ └── MuiThemeProvider.tsx      # Theme provider component
+├── middleware.ts               # for handle protected routing
 ├── public/                     # Public assets (images, icons)
 ├── styles/                     # Global styles (optional)
 ├── .env.local                  # Environment variables
@@ -98,5 +102,5 @@ NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_messaging_id
 NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
 
 ```
-
+---
 
